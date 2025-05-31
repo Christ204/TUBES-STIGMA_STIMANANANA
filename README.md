@@ -21,10 +21,23 @@ Bot yang dibuat akan menggunakan algoritma _**Greedy**_ dengan tujuan utama mend
 ## Penjelasan Algoritma
 Kelompok Stimanana menggunakan beberapa strategi greedy untuk menentukan langkah selanjutnya. Berikut adalah beberapa metode utama yang diimplementasikan dalam file `Stimanana.py`:
 
-1. **distance**: Menghitung jarak antara dua posisi menggunakan rumus jarak Manhattan.
-2. **get_teleporters**: Mencari semua objek bertipe teleporter di papan permainan untuk efisiensi jarak.
-3. **distance_with_teleporter**: Menghitung jarak antara dua posisi dengan mempertimbangkan penggunaan teleportasi.
-4. **next_move**: Fungsi utama yang menentukan langkah selanjutnya bot berdasarkan berbagai strategi greedy.
+1. **Greedy by Escape** Jika bot membawa ≥3 diamond dan ada musuh dalam jarak ≤2, bot langsung pulang ke base untuk mengamankan diamond.
+
+2. **Greedy by Return (Waktu):** Jika waktu tersisa kurang dari atau sama dengan jarak ke base (mempertimbangkan teleporter jika lebih cepat), bot langsung pulang ke base.
+
+3. **Greedy by Return (Langkah):** Jika waktu tersisa sama atau kurang dari jumlah langkah ke base, bot langsung pulang ke base.
+
+4. **Greedy by Tackle:** Jika ada musuh bersebelahan (jarak 1) yang membawa ≥2 diamond, bot akan menyerang (tackle) musuh tersebut.
+
+5. **Greedy by Red Button:** Jika red button lebih dekat daripada diamond terdekat dan diamond di board < 10, bot akan menekan red button.
+
+6. **Greedy by Distance (Inventory Penuh):** Jika inventory penuh (≥5 diamond) atau waktu hampir habis, bot langsung pulang ke base (memilih jalur teleporter jika lebih efisien).
+
+7. **Greedy by Red Diamond:** Jika sudah membawa ≥3 diamond, bot akan pulang ke base, tetapi jika ada red diamond yang dekat (≤3 langkah) dan masih muat di inventory, bot akan mengambilnya dulu.
+
+8. **Greedy by Diamond:** Jika inventory belum penuh, bot akan mencari diamond terdekat (prioritas red diamond jika muat, lalu blue diamond).
+
+9. **Greedy by Return (Mampir Base):** Jika bot sedang menuju tujuan lain, tetapi melewati base dan membawa diamond, bot akan mampir ke base untuk mengamankan diamond.
 
 Implementasi dari algoritma tersebut dapat ditemukan di file _Stimanana.py_ pada struktur:
 ```
