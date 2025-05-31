@@ -14,7 +14,7 @@
 3. [Penggunaan Program](#penggunaan-program)
 
 ## Deskripsi Umum
-Tugas Besar 1 Strategi Algoritma ini bertujuan untuk mengimplementasikan bot pada permainan _Diamonds_. Permainan _Diamonds_ merupakan permainan sederhana yang memiliki objektif bagi pemain untuk mendapatkan _Diamonds_ sebanyak-banyaknya pada papan permainan.
+Tugas Besar  STIGMA ini bertujuan untuk mengimplementasikan bot pada permainan _Diamonds_. Permainan _Diamonds_ merupakan permainan sederhana yang memiliki objektif bagi pemain untuk mendapatkan _Diamonds_ sebanyak-banyaknya pada papan permainan.
 
 Bot yang dibuat akan menggunakan algoritma _**Greedy**_ dengan tujuan utama mendapatkan _Diamond_ sebanyak-banyaknya agar dapat memenangkan permainan.
 
@@ -39,7 +39,7 @@ Sebelum proses instalasi, pengguna harus memasang _requirements_ sebagai berikut
 
 1. Clone repository ini sebagai algoritma bot yang akan digunakan
 ```
-git clone https://github.com/Christ204/Tubes-Stigma_Stimanana-bot.git
+
 ```
 2. Clone repository ini sebagai _game engine_.
 ```
