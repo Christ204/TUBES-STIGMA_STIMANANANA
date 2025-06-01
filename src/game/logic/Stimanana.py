@@ -70,7 +70,7 @@ class StimananaLogic(BaseLogic):
                 min_dist = dist
         return closest
 
-    # Fungsi untuk mencari musuh terdekat dalam radius tackle (jarak 1)
+    # Fungsi untuk mencari musuh terdekat dalam radius tackle (jarak 2)
     # Digunakan dalam strategi Greedy by Tackle
     def find_enemy_to_tackle(self, bot: GameObject, board: Board):
         for enemy in board.bots:
@@ -78,7 +78,7 @@ class StimananaLogic(BaseLogic):
                 return enemy.position
         return None
 
-    # Fungsi untuk menemukan red button (diamond button) di board
+    # Fungsi untuk menemukan red button  di board
     # Digunakan untuk strategi Greedy by Red Button
     def get_red_button(self, board: Board):
         for obj in board.game_objects:
